@@ -11,7 +11,7 @@ public class GameOfLife {
 		String fileName = args[0];
 		//// Uncomment the test that you want to execute, and re-compile.
 		//// (Run one test at a time).
-		// test1(fileName);
+		test1(fileName);
 		test2(fileName);
 		// test3(fileName, 3);
 		// play(fileName);
@@ -20,18 +20,18 @@ public class GameOfLife {
 	// Reads the data file and prints the initial board.
 	public static void test1(String fileName) {
 		int[][] board = read(fileName);
-		//print(board);
+		print(board);
 	}
 		
 	// Reads the data file, and runs a test that checks 
 	// the count and cellValue functions.
 	public static void test2(String fileName) {
 		int[][] board = read(fileName);
-		System.err.println(cellValue(board,2,2 ));
-		System.err.println(cellValue(board,2,3 ));
-		System.err.println(cellValue(board,3,2 ));
-		System.err.println(cellValue(board,3,3 ));
-		System.err.println(cellValue(board,4,3 ));
+		// System.err.println(cellValue(board,2,2 ));
+		// System.err.println(cellValue(board,2,3 ));
+		// System.err.println(cellValue(board,3,2 ));
+		// System.err.println(cellValue(board,3,3 ));
+		// System.err.println(cellValue(board,4,3 ));
 
 
 		// System.err.println(cellValue(board,3,3 ));
