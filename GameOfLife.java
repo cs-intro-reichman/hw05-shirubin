@@ -12,7 +12,7 @@ public class GameOfLife {
 		//// Uncomment the test that you want to execute, and re-compile.
 		//// (Run one test at a time).
 		// test1(fileName);
-		// test2(fileName);
+		test2(fileName);
 		// test3(fileName, 3);
 		// play(fileName);
 	}
@@ -27,7 +27,13 @@ public class GameOfLife {
 	// the count and cellValue functions.
 	public static void test2(String fileName) {
 		int[][] board = read(fileName);
-		// System.err.println(count(board,1,1 ));
+		// System.err.println(count(board,3,3 ));
+		// System.err.println(count(board,2,3 ));
+		// System.err.println(count(board,3,2 ));
+		// System.err.println(count(board,3,3 ));
+		// System.err.println(count(board,4,3 ));
+
+
 		// System.err.println(cellValue(board,3,3 ));
 
 		//// Write here code that tests that the count and cellValue functions
@@ -149,11 +155,11 @@ public class GameOfLife {
 	// Assumes that j is at least 1 and at most the number of columns in the board - 1. 
 	public static int count(int[][] board, int i, int j) {
 		int count = 0;
-		for (int k = i-1; k <= i+1; k++) {
+		for (int k = i-2; k <= i; k++) {
 			// System.out.println("in");
-			for (int k2 = j-1; k2 <= j+1; k2++) {
+			for (int k2 = j-2; k2 <= j; k2++) {
 			// System.out.println("in2");
-				if ((k!=i || k2!=j)) {
+				if ((k!=i-1 || k2!=j-1)) {
 					if(board[k][k2]==1){
 						count++;
 					}
@@ -168,7 +174,7 @@ public class GameOfLife {
     public static void print(int[][] arr) {
 		for (int x = 0; x < arr.length-2; x++) {
 			for (int y = 0; y < arr[x].length-2; y++) {
-			System.out.printf("%4s",arr[x][y]);
+			System.out.printf("%2s",arr[x][y]);
 			}
 			System.out.println(); 
 		}
