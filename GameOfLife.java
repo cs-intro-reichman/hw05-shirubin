@@ -112,7 +112,7 @@ public class GameOfLife {
 		int[][] board2 = new int[board.length][board.length];
 		for (int i = 1; i < board.length-2; i++) {
 			for (int j = 1; j < board[i].length-2; j++) {
-				board2[i][j]= cellValue(board,i,j);
+				board2[i][j]= cellValue(board,i+1,j+1);
 			}
 		}
 		//// Replace the following statement with your code.
