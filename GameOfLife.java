@@ -27,11 +27,11 @@ public class GameOfLife {
 	// the count and cellValue functions.
 	public static void test2(String fileName) {
 		int[][] board = read(fileName);
-		// System.err.println(count(board,3,3 ));
-		// System.err.println(count(board,2,3 ));
-		// System.err.println(count(board,3,2 ));
-		// System.err.println(count(board,3,3 ));
-		// System.err.println(count(board,4,3 ));
+		System.err.println(cellValue(board,2,2 ));
+		System.err.println(cellValue(board,2,3 ));
+		System.err.println(cellValue(board,3,2 ));
+		System.err.println(cellValue(board,3,3 ));
+		System.err.println(cellValue(board,4,3 ));
 
 
 		// System.err.println(cellValue(board,3,3 ));
@@ -130,8 +130,8 @@ public class GameOfLife {
 	// Uses the count(board,i,j) function to count the number of alive neighbors.
 	public static int cellValue(int[][] board, int i, int j) {
 		int countNeighbors=count(board, i,  j);
-		int zeroOrOne =board[i][j];
-		if(board[i][j]==1){
+		int zeroOrOne =board[i-1][j-1];
+		if(board[i-1][j-1]==1){
 			if(countNeighbors==1){
 				zeroOrOne = 0;
 			}
@@ -174,7 +174,7 @@ public class GameOfLife {
     public static void print(int[][] arr) {
 		for (int x = 0; x < arr.length-2; x++) {
 			for (int y = 0; y < arr[x].length-2; y++) {
-			System.out.printf("%2s",arr[x][y]);
+			System.out.printf("%4s",arr[x][y]);
 			}
 			System.out.println(); 
 		}
